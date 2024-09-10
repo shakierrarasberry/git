@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Responsive Navbar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color:#EFE9DC ;
+        }
+
+        /* Navbar Atas (Desktop) */
+        /* Navbar Atas (Desktop) */
+        #navbar-top {
+            background-color:#EFE9DC;
+            color: #8D765A;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            z-index: 1000;
+            height: 85px;
+        }
+
+        .nav-links a {
+            color:#8D765A;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 15px;
+        }
+           .navbartengah{
+             color: #8D765A;
+            padding: 1rem;
+          margin-left: -40px;
+          margin-top: -10px;
+            top: 0;
+            width: 100%;
+            display: flex;
+         justify-content: center;
+        }
+
+
+        /* Navbar Bawah (Mobile) */
+        #navbar-bottom {
+            display: flex;
+            /* Tampilkan navbar bawah di Mobile */
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #BEAC94;
+            /* Warna latar dari style kedua */
+            justify-content: space-evenly;
+            padding: 10px;
+            z-index: 1000;
+        }
+
+        /* Media Query untuk Mobile */
+        @media (max-width: 767px) {
+            #navbar-top {
+                display: none;
+                /* Navbar atas tidak tampil di Mobile */
+            }
+
+            #navbar-bottom {
+                display: flex;
+                /* Navbar bawah tampil di Mobile */
+            }
+        }
+
+        /* Media Query untuk Desktop */
+        @media (min-width: 768px) {
+            #navbar-top {
+                display: flex;
+                /* Navbar atas tampil di Desktop */
+            }
+
+            #navbar-bottom {
+                display: none;
+                /* Navbar bawah tidak tampil di Desktop */
+            }
+        }
+
+
+        .label {
+            padding: 8px 18px;
+            transition: all 200ms;
+            display: inline-block;
+        }
+
+        .label input[type="radio"] {
+            display: none;
+        }
+
+        .label>svg{
+            transition: all 200ms;
+            fill: #EFE9DC;
+            width: 20px;
+        }
+        #label>svg{
+          transition: all 200ms;
+            fill:#BEAC94;
+            width: 20px;
+        }
+        
+.label > svg:hover path {
+    fill: #8D765A; /* Warna berubah saat di-hover */
+}
+#maps {
+    transition: all 200ms;
+    color: #EFE9DC;
+    width: 20px;
+    font-size: 20px;
+}
+
+#maps:hover {
+    color: #8D765A; /* Warna berubah saat di-hover */
+}
+#keranjang {
+    transition: all 200ms;
+    color: #8D765A;
+    width: 20px;
+    font-size: 20px;
+}
+
+
+
+
+
+
+        /* Media Query untuk Mobile */
+        @media (max-width: 767px) {
+            #navbar-top {
+                display: none;
+                /* Navbar atas tidak tampil di Mobile */
+            }
+
+            #navbar-bottom {
+                display: flex;
+                /* Navbar bawah tampil di Mobile */
+            }
+        }
+
+     
+        .mobile-only {
+            display: none;
+        }
+
+        @media (max-width: 767px) {
+            .mobile-only {
+                display: block;
+                position: fixed;
+                top: 0;
+                right: 0;
+                padding: 1rem;
+                z-index: 1000;
+                background: white;
+                /* Warna latar belakang jika diperlukan */
+            }
+        }
+
+        .navkhususmobile {
+            display: flex;
+            justify-content: space-between;
+            margin-right: 20px;
+        }
+        .img{
+            width : 150px;
+            margin-top: -30px;
+            margin-left: 10px;
+        }
+        .imgmobile{
+            width : 70px;
+        }
+       
+        /* search*/ 
+.search {
+  --input-line: #8D765A;
+  --input-text-color: #8D765A;
+  --input-text-hover-color: transparent;
+  --input-border-color: #8D765A;
+  --input-border-hover-color: #8D765A;
+  --input-bg-color: transparent;
+  --search-max-width: 250px;
+  --search-min-width: 150px;
+  --border-radius: 5px;
+  --transition-cubic-bezier: 150ms cubic-bezier(0.4,0,0.2,1);
+}
+
+.search-box {
+  max-width: var(--search-max-width);
+  min-width: var(--search-min-width);
+  height: 35px;
+  border: 1px solid var(--input-border-color);
+  border-radius: var(--border-radius);
+  padding: 5px 15px;
+  background: var(--input-bg-color);
+ 
+  transition: var(--transition-cubic-bezier);
+}
+
+.search-box:hover {
+  border-color: var(--input-border-hover-color);
+}
+
+/Section input/
+.search-field {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  left: -5px;
+  border: 0;
+}
+
+.input {
+  width: calc(100% - 29px);
+  height: 100%;
+  border: 0;
+  border-color: transparent;
+  font-size: 1rem;
+  padding-right: 0px;
+  color: var(--input-line);
+  background: var(--input-bg-color);
+  border-right: 2px solid var(--input-border-color);
+  outline: none;
+}
+
+.input::-webkit-input-placeholder {
+  color: var(--input-text-color);
+}
+
+.input::-moz-input-placeholder {
+  color: var(--input-text-color);
+}
+
+.input::-ms-input-placeholder {
+  color: var(--input-text-color);
+}
+
+.input:focus::-webkit-input-placeholder {
+  color: var(--input-text-hover-color);
+}
+
+.input:focus::-moz-input-placeholder {
+  color: var(--input-text-hover-color);
+}
+
+.input:focus::-ms-input-placeholder {
+  color: var(--input-text-hover-color);
+}
+
+/Search button/
+.search-box-icon {
+  width: 52px;
+  height: 35px;
+  position: absolute;
+  top: -6px;
+  right: -21px;
+  background: transparent !important; /* Mengatur latar belakang menjadi transparan dan pastikan ini diterapkan */
+  border-bottom-right-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  transition: var(--transition-cubic-bezier);
+  box-shadow: none !important; /* Menghapus bayangan */
+}
+
+.search-box-icon:hover {
+  background: var(--input-border-color) !important; /* Warna latar belakang saat hover */
+  box-shadow: none !important; /* Menghapus bayangan saat hover */
+}
+
+
+
+.btn-icon-content {
+  width: 52px;
+  height: 35px;
+  top: -6px;
+  right: -21px;
+  background: transparent;
+  border: none;
+  color:#8D765A ;
+  cursor: pointer;
+  border-bottom-right-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  transition: var(--transition-cubic-bezier);
+  opacity: .4;
+}
+
+.btn-icon-content:hover {
+  opacity: .8;
+}
+
+.search-icon {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 7px;
+  right: 15px;
+}
+.icon.cart {
+    width: 30px; /* Atur ke ukuran yang lebih proporsional */
+    height: 30px;
+    max-width: 100%; /* Membatasi agar tidak terlalu besar */
+    max-height: 100%;
+    margin-top: -10px;
+}
+
+
+    </style>
+</head>
+
+<body>
+
+    
+        <nav id="navbar-top">
+        <div>
+            <img class="img" src="asset/logo.png" alt="">
+        </div>
+        <div class="navbartengah">
+             <div class="nav-links"><a href="#">Home</a></div>
+        <div class="nav-links"><a href="#">location</a></div>
+        <div class="nav-links"><a href="#">categories</a></div>
+        <div class="nav-links"><a href="#">about us</a></div>
+        </div>
+       
+         <div style="display: flex; justify-content: space-around;"> 
+<div class="search">
+  <div class="search-box">
+    <div class="search-field">
+      <input placeholder="Search..." class="input" type="text">
+      <div class="search-box-icon">
+        <button class="btn-icon-content">
+          <i class="search-icon">
+            <svg xmlns="://www.w3.org/2000/svg" version="1.1" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" fill="#fff"></path></svg>
+          </i>
+        </button>
+      </div>
+    </div>
+  </div></div> 
+<label title="cart" for="cart" class="label">
+    <input id="cart" name="page" type="radio" />
+    <svg xmlns="http://www.w3.org/2000/svg" fill="inherit" viewBox="0 0 18 20" height="20" width="18" class="icon cart" id="keranjang">
+        <path fill="inherit"
+            d="M16.8035 6.96427C16.1335 6.22427 15.1235 5.79427 13.7235 5.64427V4.88427C13.7235 3.51427 13.1435 2.19427 12.1235 1.27427C11.6202 0.812823 11.025 0.462927 10.3771 0.247511C9.72909 0.032095 9.04292 -0.0439787 8.3635 0.0242742C5.9735 0.254274 3.9635 2.56427 3.9635 5.06427V5.64427C2.5635 5.79427 1.5535 6.22427 0.883496 6.96427C-0.0865043 8.04427 -0.0565042 9.48427 0.0534958 10.4843L0.753496 16.0543C0.963496 18.0043 1.7535 20.0043 6.0535 20.0043H11.6335C15.9335 20.0043 16.7235 18.0043 16.9335 16.0643L17.6335 10.4743C17.7435 9.48427 17.7635 8.04427 16.8035 6.96427ZM8.5035 1.41427C8.98813 1.36559 9.47758 1.41913 9.94023 1.57143C10.4029 1.72372 10.8284 1.97138 11.1894 2.29841C11.5503 2.62544 11.8387 3.02456 12.0357 3.46998C12.2328 3.91539 12.3343 4.39721 12.3335 4.88427V5.58427H5.3535V5.06427C5.3535 3.28427 6.8235 1.57427 8.5035 1.41427ZM5.2635 11.1543H5.2535C4.7035 11.1543 4.2535 10.7043 4.2535 10.1543C4.2535 9.60427 4.7035 9.15427 5.2535 9.15427C5.8135 9.15427 6.2635 9.60427 6.2635 10.1543C6.2635 10.7043 5.8135 11.1543 5.2635 11.1543ZM12.2635 11.1543H12.2535C11.7035 11.1543 11.2535 10.7043 11.2535 10.1543C11.2535 9.60427 11.7035 9.15427 12.2535 9.15427C12.8135 9.15427 13.2635 9.60427 13.2635 10.1543C13.2635 10.7043 12.8135 11.1543 12.2635 11.1543Z">
+        </path>
+    </svg>
+</label>
+</div>
+    
+    </nav>
+   
+    
+
+    <div class="navkhususmobile">
+        <img class="imgmobile" src="asset/logo.png" alt="">
+        <label title="cart" for="cart" class="label" id="label">
+            <input id="cart" name="page" type="radio" />
+            <svg xmlns="http://www.w3.org/2000/svg" fill="inherit" viewBox="0 0 18 20" height="20" width="18" class="icon cart ">
+                <path fill="inherit"
+                    d="M16.8035 6.96427C16.1335 6.22427 15.1235 5.79427 13.7235 5.64427V4.88427C13.7235 3.51427 13.1435 2.19427 12.1235 1.27427C11.6202 0.812823 11.025 0.462927 10.3771 0.247511C9.72909 0.032095 9.04292 -0.0439787 8.3635 0.0242742C5.9735 0.254274 3.9635 2.56427 3.9635 5.06427V5.64427C2.5635 5.79427 1.5535 6.22427 0.883496 6.96427C-0.0865043 8.04427 -0.0565042 9.48427 0.0534958 10.4843L0.753496 16.0543C0.963496 18.0043 1.7535 20.0043 6.0535 20.0043H11.6335C15.9335 20.0043 16.7235 18.0043 16.9335 16.0643L17.6335 10.4743C17.7435 9.48427 17.7635 8.04427 16.8035 6.96427ZM8.5035 1.41427C8.98813 1.36559 9.47758 1.41913 9.94023 1.57143C10.4029 1.72372 10.8284 1.97138 11.1894 2.29841C11.5503 2.62544 11.8387 3.02456 12.0357 3.46998C12.2328 3.91539 12.3343 4.39721 12.3335 4.88427V5.58427H5.3535V5.06427C5.3535 3.28427 6.8235 1.57427 8.5035 1.41427ZM5.2635 11.1543H5.2535C4.7035 11.1543 4.2535 10.7043 4.2535 10.1543C4.2535 9.60427 4.7035 9.15427 5.2535 9.15427C5.8135 9.15427 6.2635 9.60427 6.2635 10.1543C6.2635 10.7043 5.8135 11.1543 5.2635 11.1543ZM12.2635 11.1543H12.2535C11.7035 11.1543 11.2535 10.7043 11.2535 10.1543C11.2535 9.60427 11.7035 9.15427 12.2535 9.15427C12.8135 9.15427 13.2635 9.60427 13.2635 10.1543C13.2635 10.7043 12.8135 11.1543 12.2635 11.1543Z">
+                </path>
+            </svg>
+        </label>
+    </div>
+
+
+    <!-- Navbar Bawah (Mobile) -->
+    <section id="navbar-bottom">
+        <label title="home" for="home" class="label">
+            <input id="home" name="page" type="radio" checked="" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 20" height="20" width="21" class="icon home" id="label">
+                <path fill="inherit"
+                    d="M18.9999 6.01002L12.4499 0.770018C11.1699 -0.249982 9.16988 -0.259982 7.89988 0.760018L1.34988 6.01002C0.409885 6.76002 -0.160115 8.26002 0.0398848 9.44002L1.29988 16.98C1.58988 18.67 3.15988 20 4.86988 20H15.4699C17.1599 20 18.7599 18.64 19.0499 16.97L20.3099 9.43002C20.4899 8.26002 19.9199 6.76002 18.9999 6.01002ZM10.9199 16C10.9199 16.41 10.5799 16.75 10.1699 16.75C9.75988 16.75 9.41988 16.41 9.41988 16V13C9.41988 12.59 9.75988 12.25 10.1699 12.25C10.5799 12.25 10.9199 12.59 10.9199 13V16Z">
+                </path>
+            </svg>
+        </label>
+        <label title="cart" for="cart" class="label">
+            <input id="cart" name="page" type="radio" />
+            <svg xmlns="http://www.w3.org/2000/svg" fill="inherit" viewBox="0 0 18 20" height="20" width="18"
+                >
+          <i fill="inherit" class="bi bi-geo-alt-fill" id="maps"></i>
+            </svg>
+        </label>
+        <label title="profile" for="profile" class="label">
+            <input id="profile" name="page" type="radio" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 20" height="20" width="18" class="icon profile" id="label">
+                <path fill="inherit"
+                    d="M9.14365 12.4805C4.51168 12.4805 0.782227 13.5748 0.782227 16.354C0.782227 19.1332 4.49365 20.2446 9.14365 20.2446C13.7756 20.2446 17.5051 19.1504 17.5051 16.3712C17.5051 13.592 13.7936 12.4805 9.14365 12.4805ZM9.14365 0.00641026C6.62518 0.00641026 4.59702 2.09744 4.59702 4.72051C4.59702 7.34359 6.62518 9.42564 9.14365 9.42564C11.6528 9.42564 13.6903 7.33461 13.6903 4.71154C13.6903 2.08846 11.6528 0.00641026 9.14365 0.00641026ZM9.14365 7.29359C7.69316 7.29359 6.51634 6.07282 6.51634 4.5959C6.51634 3.11897 7.69316 1.89821 9.14365 1.89821C10.5941 1.89821 11.7619 3.11897 11.7619 4.5959C11.7619 6.07282 10.5941 7.29359 9.14365 7.29359Z">
+                </path>
+            </svg>
+        </label>
+    </section>
+
+    <script>
+        // JavaScript for custom functionality (if needed)
+    </script>
+</body>
+
+</html>
